@@ -1,12 +1,14 @@
 ﻿using BaigiamasisDarbas.BaigiamasisProjektas.Pages;
+using Docker.DotNet.Models;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using TechTalk.SpecFlow;
 
 namespace BaigiamasisDarbasSpecFlow.Features
 {
     [Binding]
-    public class LoginFeatureSteps
+    public class LoginFeatureSteps : BaseDriver
 
     {
         private LoginPage loginPage;
@@ -41,4 +43,5 @@ namespace BaigiamasisDarbasSpecFlow.Features
             loginPage.AssertLogoutButtonVisible();
         }
     }
+
 }
